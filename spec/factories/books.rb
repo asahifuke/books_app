@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :book do
     sequence(:title) { |n| "title#{n}" }
@@ -6,6 +8,6 @@ FactoryBot.define do
   end
 
   trait :with_attachment do
-    picture { Rack::Test::UploadedFile.new("#{Rails.root}/spec/files/attachment.jpg", 'image/jpeg')}
+    picture { Rack::Test::UploadedFile.new(Rails.root.join('spec/files/attachment.jpg'), 'image/jpeg') }
   end
 end

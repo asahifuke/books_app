@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Books", type: :system do
+RSpec.describe 'Books', type: :system do
   let!(:book) { FactoryBot.create(:book, :with_attachment) }
 
   it '一覧画面のテスト' do
@@ -41,7 +43,7 @@ RSpec.describe "Books", type: :system do
     fill_in 'Title', with: title
     fill_in 'Memo', with: memo
     fill_in 'Author', with: author
-    attach_file "Picture", "#{Rails.root}/spec/files/attachment.jpg"
+    attach_file 'Picture', Rails.root.join('spec/files/attachment.jpg')
     click_button button
     expect(page).to have_content message
     expect(page).to have_content title
@@ -49,5 +51,4 @@ RSpec.describe "Books", type: :system do
     expect(page).to have_content author
     expect(page).to have_selector("img[src$='attachment.jpg']")
   end
-
 end
