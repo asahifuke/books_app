@@ -2,9 +2,9 @@
 
 FactoryBot.define do
   factory :book do
-    sequence(:title) { |n| "title#{n}" }
-    sequence(:memo) { |n| "memo#{n}" }
-    sequence(:author) { |n| "auther#{n}" }
+    title { "testtitle" }
+    memo { "test memo" }
+    author { "test auther" }
   end
 
   trait :with_attachment do
