@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :book do
-    title { "testtitle" }
+    title { "test title" }
     memo { "test memo" }
     author { "test auther" }
   end
