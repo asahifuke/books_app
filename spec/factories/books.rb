@@ -2,9 +2,9 @@
 
 FactoryBot.define do
   factory :book do
-    title { "testtitle" }
-    memo { "test memo" }
-    author { "test auther" }
+    title { 'test title' }
+    memo { 'test memo' }
+    author { 'test auther' }
   end
 
   trait :with_attachment do
