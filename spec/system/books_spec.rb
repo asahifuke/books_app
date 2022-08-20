@@ -46,7 +46,7 @@ RSpec.describe 'Books', type: :system do
     page.accept_confirm do
       click_link 'Destroy', match: :first
     end
-    expect(page).not_to have_content 'Book was successfully destroy.'
+    expect(page).to have_content 'Book was successfully destroyed.'
     expect(page).not_to have_content 'プロを目指す人のためのRuby入門 言語仕様からテスト駆動開発・デバッグ技法まで'
   end
 end
